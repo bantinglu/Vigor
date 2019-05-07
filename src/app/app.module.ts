@@ -4,41 +4,31 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module'
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
-import { sideNavModule } from './sideNav/sideNav.module';
 import { HomeComponent } from './Home/home.component';
-import { DeckListComponent } from './Decklist/decklist.component';
-import { DetailsComponent } from './Details/details.component';
 
 import { AppComponent } from './app.component';
-import { RouterModule, Routes} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
-
-import { HttpClientModule} from '@angular/common/http';
 import { LayoutComponent } from './layout/layout.component';
+import { RoutingModule } from './routing/routing.module';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DeckListComponent,
-    DetailsComponent,
-    LayoutComponent
+    LayoutComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    sideNavModule,
-    RouterModule.forRoot([
-      {path: '', component: HomeComponent}, 
-      {path: 'decklist', component: DeckListComponent}, 
-      {path: 'about', component: DetailsComponent}, 
-    ]),
-    HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
