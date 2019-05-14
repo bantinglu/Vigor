@@ -12,6 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { RoutingModule } from './routing/routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 @NgModule({
@@ -28,9 +29,10 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     MaterialModule,
     FlexLayoutModule,
     AppRoutingModule,
-    RoutingModule
+    RoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

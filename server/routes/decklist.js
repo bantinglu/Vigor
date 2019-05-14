@@ -5,12 +5,20 @@ const postAPI = 'https://jsonplaceholder.typicode.com';
 //GET
 
 router.get('/', (req, res)=>{
-    axios.get(`${postAPI}/posts`).then(posts=>{
-        res.status(200).json(posts.data);
-        //res.sendStatus(200);
-    }).catch(error=>{
-        res.status(500).send(error);
-    })
+    posts = [{
+            "Quantity": 4,
+            "Name": "Primeval Titan"
+        },
+        {
+            "Quantity": 4,
+            "Name": "Amulet of Vigor"
+        },
+        {
+            "Quantity": 4,
+            "Name": "Anicent Stirrings"
+    }];
+    res.status(200).json(posts);
+       
 });
 
 module.exports=router;

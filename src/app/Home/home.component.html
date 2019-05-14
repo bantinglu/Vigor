@@ -7,7 +7,16 @@
 
     <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
         <mat-tab label="Amulet Titan (white)"> 
-            <p>We are going to use different material components to create nice looking angular app.</p> 
+            <table class="table table-striped mt-5">
+                <thead> 
+                </thead>
+                <tbody>
+                  <tr *ngFor="let post of posts">
+                    <td>{{post.Quantity}}</td>
+                    <td>{{post.Name}}</td>
+                  </tr>
+                </tbody>
+              </table>
         </mat-tab>
         <mat-tab label="Bloom Titan">
             <p>We will consume our .NET Core application. Basically, we will create complete CRUD client app.</p>
