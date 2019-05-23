@@ -7,19 +7,19 @@
 
     <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
         <mat-tab label="Amulet Titan (white)"> 
-            <table class="table table-striped mt-5">
-                <thead> 
-                </thead>
-                <tbody>
-                  <tr *ngFor="let post of posts">
-                    <td>{{post.Quantity}}</td>
-                    <td>{{post.Name}}</td>
-                  </tr>
-                </tbody>
-              </table>
+            <ul>
+                <li *ngFor="let post of posts" >
+                <span>{{post.Quantity}} </span>
+                <span (mouseover)="displayCard(post.Name)">{{post.Name}}</span>
+                </li>
+                <img class="resize" src = "{{imageSource}}" onError="this.onerror=null;this.src='assets/cardBack.jpg';">
+            </ul>
         </mat-tab>
         <mat-tab label="Bloom Titan">
-            <p>We will consume our .NET Core application. Basically, we will create complete CRUD client app.</p>
+            <a (mouseover)="displayCard('Sakura tribe Scout')">
+                primeval titan
+            </a>
+            <img class="resize" src = "{{imageSource}}" onError="this.onerror=null;this.src='assets/cardBack.jpg';">
         </mat-tab>
         <mat-tab label="Breach Titan">
             <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>

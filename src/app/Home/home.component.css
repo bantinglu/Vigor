@@ -11,3 +11,7 @@ section div + p{
     font-size: 20px;
     padding-bottom: 20px;
 }
+img.resize {
+    width:275px;
+    height:400px;
+}
