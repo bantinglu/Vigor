@@ -8,13 +8,20 @@ import { DecklistService } from './home.service';
   providers:  [ DecklistService ]
 })
 export class HomeComponent {
-  posts: any = [];
+  main: any = [];
+  side: any = [];
+  main_white : any = [];
+  side_white : any = [];
   imageSource : any;
 
   constructor(private decklistService: DecklistService) { }
   ngOnInit(){
     this.decklistService.getAllPosts().subscribe(posts=>{
-      this.posts = posts;
+      this.main = posts["karn"]["main"];
+      this.side = posts["karn"]["side"];
+
+      this.main_white = posts["white"]["main"];
+      this.side_white = posts["white"]["side"];
     });
   }
 

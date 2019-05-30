@@ -15,3 +15,11 @@ img.resize {
     width:275px;
     height:400px;
 }
+
+.column {
+    float: left;
+    width: 15%;
+    margin: 10px 20px 30px 40px;
+  }
+  
+  
