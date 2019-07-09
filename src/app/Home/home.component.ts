@@ -27,7 +27,6 @@ export class HomeComponent {
 
   public executeSelectedChange = (event) => {
     this.imageSource = "assets/cardBack.jpg";
-    console.log(event);
   }
 
   public displayCard = (name) =>{
@@ -36,6 +35,5 @@ export class HomeComponent {
     });
   }
   public click = () =>{
-    console.log("click");
   }
 }

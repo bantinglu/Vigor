@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './../Home/home.component';
- 
+import { SideboardGuideComponent } from "./../sideboard-guide/sideboard-guide.component"
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
+  { path: 'sideboarding', component: SideboardGuideComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
  
 ];
