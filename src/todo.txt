@@ -1,4 +1,7 @@
-2019/02.26
-1. text to ul
-3. data-bind text file to deck page
-4. research deck hover api
+2019/08-22
+
+1. finish sb guide for humans/phoenix
+2. formatting the sb 
+3. caching for images
+ 
+
